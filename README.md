@@ -17,15 +17,17 @@ A react native module to show toast like android, it works on iOS and Android.
 
 ### Settings
 
-| Name      | Default | Type    | Description |
-| --------- | ------- | ------- | ----------- |
-| ref       | null    | useRef  | .....       |
-| isVisible | false   | Boolean | .....       |
-| timer     | 1500    | Number  | .....       |
+| Name      | Default | Type    | Description                 |
+| --------- | ------- | ------- | --------------------------- |
+| ref       | null    | useRef  | .....                       |
+| isVisible | false   | Boolean | .....                       |
+| timer     | 1500    | Number  | .....                       |
+| position  | center  | String  | Values: top, center, bottom |
 
-### Usage 
+### Usage
 
 ##### **Toast Error**
+
 ```
 import React, { useRef } from 'react';
 import Toast from 'react-native-root-toast';

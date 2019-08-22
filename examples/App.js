@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { StyleSheet, Text, View, Button, TextInput } from "react-native";
+import { StyleSheet, Text, View, Button } from "react-native";
 import Toast from "./components/toast";
 
 export default function App() {
@@ -13,7 +13,12 @@ export default function App() {
     <View style={styles.container}>
       <Text>React Native Toast Pro</Text>
       <Button title="Test Toast Componente" onPress={() => toastComponente()} />
-      <Toast ref={toastRef} isVisible={true} duration={3500} />
+      <Toast
+        ref={toastRef}
+        isVisible={true}
+        duration={3500}
+        position="center"
+      />
     </View>
   );
 }

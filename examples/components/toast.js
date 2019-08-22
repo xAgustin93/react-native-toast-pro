@@ -1,8 +1,14 @@
-import React, { forwardRef, useState, useImperativeHandle } from "react";
-import { StyleSheet, Text, View } from "react-native";
+import React, { useState, forwardRef, useImperativeHandle } from "react";
+import { Text, View } from "react-native";
 
 function Toast(props, ref) {
-  const { isVisible = false, duration = 1500 } = props;
+  const { isVisible = false, duration = 1500, position = "center" } = props;
+  const positionToast =
+    position == "top"
+      ? "flex-start"
+      : position == "bottom"
+      ? "flex-end"
+      : "center";
   const [isToastVisible, setIsToastVisible] = useState(isVisible ? 1 : 0);
   const [isToastDisplay, setIsToastDisplay] = useState("none");
   const [content, setContent] = useState(null);
@@ -22,7 +28,11 @@ function Toast(props, ref) {
     showError: text => {
       setContent(
         <View
-          style={{ backgroundColor: "#f00", padding: 10, borderRadius: "10px" }}
+          style={{
+            backgroundColor: "#f00",
+            padding: 10,
+            borderRadius: "10px"
+          }}
         >
           <Text style={{ color: "#fff", fontSize: 20 }}>{text}</Text>
         </View>
@@ -46,7 +56,7 @@ function Toast(props, ref) {
         position: "absolute",
         height: "100%",
         flex: 1,
-        justifyContent: "center",
+        justifyContent: positionToast,
         alignItems: "center"
       }}
     >
