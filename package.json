@@ -14,5 +14,13 @@
     "android"
   ],
   "author": "Agustin Navarro Galdon",
-  "license": "ISC"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xAgustin93/react-native-toast-pro.git"
+  },
+  "bugs": {
+    "url": "https://github.com/xAgustin93/react-native-toast-pro/issues"
+  },
+  "homepage": "https://github.com/xAgustin93/react-native-toast-pro#readme"
 }
